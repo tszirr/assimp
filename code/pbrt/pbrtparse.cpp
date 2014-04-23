@@ -70,6 +70,7 @@
 /* Line 268 of yacc.c  */
 //#line 24 "core/pbrtparse.yy"
 
+#include "api.h"
 #include "pbrt.h"
 #include "geometry.h"
 #include "spectrum.h"

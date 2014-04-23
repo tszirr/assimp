@@ -34,7 +34,7 @@ void Severe(const char *, ...);
 
 // we're not even reentrant
 typedef int AtomicInt32;
-AtomicInt32 AtomicAdd(AtomicInt32* p, AtomicInt32 n) { return *p += n; }
+inline AtomicInt32 AtomicAdd(AtomicInt32* p, AtomicInt32 n) { return *p += n; }
 
 template <class Real> inline Real Clamp(Real x, Real a, Real b) { return min(max(a, x), b); }
 inline float Lerp(float x, float y, float a) { return (1.0f - a) * x + a * y; }

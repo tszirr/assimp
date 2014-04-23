@@ -39,9 +39,12 @@
 // core/api.h*
 #include "pbrt.h"
 
+namespace pbrt
+{
+
+class ParamSet;
+
 // API Function Declarations
-void pbrtInit(const Options &opt);
-void pbrtCleanup();
 void pbrtIdentity();
 void pbrtTranslate(float dx, float dy, float dz);
 void pbrtRotate(float angle, float ax, float ay, float az);
@@ -84,5 +87,7 @@ void pbrtObjectBegin(const string &name);
 void pbrtObjectEnd();
 void pbrtObjectInstance(const string &name);
 void pbrtWorldEnd();
+
+} // namespace
 
 #endif // PBRT_CORE_API_H
