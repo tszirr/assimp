@@ -327,6 +327,30 @@ SET( Ogre_SRCS
 )
 SOURCE_GROUP( Ogre FILES ${Ogre_SRCS})
 
+SET( PBRT_CORE_SRCS
+	pbrt/pbrt.cpp
+	pbrt/pbrt.h
+	pbrt/api.h
+	pbrt/memory.h
+	pbrt/geometry.cpp
+	pbrt/geometry.h
+	pbrt/spectrum.cpp
+	pbrt/spectrum.h
+	pbrt/paramset.cpp
+	pbrt/paramset.h
+	pbrt/pbrtparse.hh
+	pbrt/pbrtlex.cpp
+	pbrt/pbrtparse.cpp
+)
+SET( PBRT_LOADER_SRCS
+)
+SET( PBRT_SRCS
+	${PBRT_CORE_SRCS}
+	${PBRT_LOADER_SRCS}
+)
+SOURCE_GROUP( PBRT\\core FILES ${PBRT_CORE_SRCS})
+SOURCE_GROUP( PBRT FILES ${PBRT_LOADER_SRCS})
+
 SET( Ply_SRCS
 	PlyLoader.cpp
 	PlyLoader.h
@@ -650,6 +674,7 @@ SET( assimp_src
 	${Obj_SRCS}
 	${Ogre_SRCS}
 	${Ply_SRCS}
+	${PBRT_SRCS}
 	${Q3D_SRCS}
 	${Q3BSP_SRCS}
 	${Raw_SRCS}
