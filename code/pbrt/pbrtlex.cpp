@@ -1,6 +1,8 @@
-#line 2 "core/pbrtlex.cpp"
+#include "../AssimpPCH.h"
 
-#line 4 "core/pbrtlex.cpp"
+//#line 2 "core/pbrtlex.cpp"
+
+//#line 4 "core/pbrtlex.cpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -23,6 +25,9 @@
 #include <stdlib.h>
 
 /* end standard C headers. */
+
+namespace pbrt
+{
 
 /* flex integer type definitions */
 
@@ -683,7 +688,7 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "core/pbrtlex.ll"
+//#line 1 "core/pbrtlex.ll"
 /*
     pbrt source code Copyright(c) 1998-2010 Matt Pharr and Greg Humphreys.
 
@@ -714,16 +719,16 @@ char *yytext;
 
  */
 /* state used for include file stuff */
-#line 26 "core/pbrtlex.ll"
+//#line 26 "core/pbrtlex.ll"
 
 #define YY_MAIN 0
 #define YY_NEVER_INTERACTIVE 1
+	
+struct ParamArray;
+
+} // namespace
 
 #include "pbrt.h"
-#include "api.h"
-#include "fileutil.h"
-
-struct ParamArray;
 
 #if defined(PBRT_IS_WINDOWS)
 #pragma warning(disable:4244)
@@ -732,6 +737,9 @@ struct ParamArray;
 #pragma warning(disable:4996)
 #endif
 #include "pbrtparse.hh"
+
+namespace pbrt
+{
 
 struct IncludeInfo {
     string filename;
@@ -785,7 +793,7 @@ void include_pop() {
 
 
 
-#line 781 "core/pbrtlex.cpp"
+//#line 781 "core/pbrtlex.cpp"
 
 #define INITIAL 0
 #define STR 1
@@ -969,10 +977,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 101 "core/pbrtlex.ll"
+//#line 101 "core/pbrtlex.ll"
 
 
-#line 968 "core/pbrtlex.cpp"
+//#line 968 "core/pbrtlex.cpp"
 
 	if ( !(yy_init) )
 		{
@@ -1057,239 +1065,239 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 103 "core/pbrtlex.ll"
+//#line 103 "core/pbrtlex.ll"
 { BEGIN COMMENT; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 104 "core/pbrtlex.ll"
+//#line 104 "core/pbrtlex.ll"
 /* eat it up */
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 105 "core/pbrtlex.ll"
+//#line 105 "core/pbrtlex.ll"
 { line_num++; BEGIN INITIAL; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 106 "core/pbrtlex.ll"
+//#line 106 "core/pbrtlex.ll"
 { return ACCELERATOR; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 107 "core/pbrtlex.ll"
+//#line 107 "core/pbrtlex.ll"
 { return ACTIVETRANSFORM; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 108 "core/pbrtlex.ll"
+//#line 108 "core/pbrtlex.ll"
 { return ALL; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 109 "core/pbrtlex.ll"
+//#line 109 "core/pbrtlex.ll"
 { return AREALIGHTSOURCE; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 110 "core/pbrtlex.ll"
+//#line 110 "core/pbrtlex.ll"
 { return ATTRIBUTEBEGIN; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 111 "core/pbrtlex.ll"
+//#line 111 "core/pbrtlex.ll"
 { return ATTRIBUTEEND; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 112 "core/pbrtlex.ll"
+//#line 112 "core/pbrtlex.ll"
 { return CAMERA; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 113 "core/pbrtlex.ll"
+//#line 113 "core/pbrtlex.ll"
 { return CONCATTRANSFORM; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 114 "core/pbrtlex.ll"
+//#line 114 "core/pbrtlex.ll"
 { return COORDINATESYSTEM; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 115 "core/pbrtlex.ll"
+//#line 115 "core/pbrtlex.ll"
 { return COORDSYSTRANSFORM; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 116 "core/pbrtlex.ll"
+//#line 116 "core/pbrtlex.ll"
 { return ENDTIME; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 117 "core/pbrtlex.ll"
+//#line 117 "core/pbrtlex.ll"
 { return FILM; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 118 "core/pbrtlex.ll"
+//#line 118 "core/pbrtlex.ll"
 { return IDENTITY; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 119 "core/pbrtlex.ll"
+//#line 119 "core/pbrtlex.ll"
 { return INCLUDE; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 120 "core/pbrtlex.ll"
+//#line 120 "core/pbrtlex.ll"
 { return LIGHTSOURCE; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 121 "core/pbrtlex.ll"
+//#line 121 "core/pbrtlex.ll"
 { return LOOKAT; }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 122 "core/pbrtlex.ll"
+//#line 122 "core/pbrtlex.ll"
 { return MAKENAMEDMATERIAL; }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 123 "core/pbrtlex.ll"
+//#line 123 "core/pbrtlex.ll"
 { return MATERIAL; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 124 "core/pbrtlex.ll"
+//#line 124 "core/pbrtlex.ll"
 { return NAMEDMATERIAL; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 125 "core/pbrtlex.ll"
+//#line 125 "core/pbrtlex.ll"
 { return OBJECTBEGIN; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 126 "core/pbrtlex.ll"
+//#line 126 "core/pbrtlex.ll"
 { return OBJECTEND; }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 127 "core/pbrtlex.ll"
+//#line 127 "core/pbrtlex.ll"
 { return OBJECTINSTANCE; }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 128 "core/pbrtlex.ll"
+//#line 128 "core/pbrtlex.ll"
 { return PIXELFILTER; }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 129 "core/pbrtlex.ll"
+//#line 129 "core/pbrtlex.ll"
 { return RENDERER; }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 130 "core/pbrtlex.ll"
+//#line 130 "core/pbrtlex.ll"
 { return REVERSEORIENTATION; }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 131 "core/pbrtlex.ll"
+//#line 131 "core/pbrtlex.ll"
 { return ROTATE; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 132 "core/pbrtlex.ll"
+//#line 132 "core/pbrtlex.ll"
 { return SAMPLER; }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 133 "core/pbrtlex.ll"
+//#line 133 "core/pbrtlex.ll"
 { return SCALE; }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 134 "core/pbrtlex.ll"
+//#line 134 "core/pbrtlex.ll"
 { return SHAPE; }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 135 "core/pbrtlex.ll"
+//#line 135 "core/pbrtlex.ll"
 { return STARTTIME; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 136 "core/pbrtlex.ll"
+//#line 136 "core/pbrtlex.ll"
 { return SURFACEINTEGRATOR; }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 137 "core/pbrtlex.ll"
+//#line 137 "core/pbrtlex.ll"
 { return TEXTURE; }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 138 "core/pbrtlex.ll"
+//#line 138 "core/pbrtlex.ll"
 { return TRANSFORMBEGIN; }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 139 "core/pbrtlex.ll"
+//#line 139 "core/pbrtlex.ll"
 { return TRANSFORMEND; }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 140 "core/pbrtlex.ll"
+//#line 140 "core/pbrtlex.ll"
 { return TRANSFORMTIMES; }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 141 "core/pbrtlex.ll"
+//#line 141 "core/pbrtlex.ll"
 { return TRANSFORM; }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 142 "core/pbrtlex.ll"
+//#line 142 "core/pbrtlex.ll"
 { return TRANSLATE; }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 143 "core/pbrtlex.ll"
+//#line 143 "core/pbrtlex.ll"
 { return VOLUME; }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 144 "core/pbrtlex.ll"
+//#line 144 "core/pbrtlex.ll"
 { return VOLUMEINTEGRATOR; }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 145 "core/pbrtlex.ll"
+//#line 145 "core/pbrtlex.ll"
 { return WORLDBEGIN; }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 146 "core/pbrtlex.ll"
+//#line 146 "core/pbrtlex.ll"
 { return WORLDEND; }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 147 "core/pbrtlex.ll"
+//#line 147 "core/pbrtlex.ll"
 /* do nothing */
 	YY_BREAK
 case 46:
 /* rule 46 can match eol */
 YY_RULE_SETUP
-#line 148 "core/pbrtlex.ll"
+//#line 148 "core/pbrtlex.ll"
 { line_num++; }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 149 "core/pbrtlex.ll"
+//#line 149 "core/pbrtlex.ll"
 {
     yylval.num = (float) atof(yytext);
     return NUM;
@@ -1297,7 +1305,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 155 "core/pbrtlex.ll"
+//#line 155 "core/pbrtlex.ll"
 {
     strcpy(yylval.string, yytext);
     return ID;
@@ -1305,57 +1313,57 @@ YY_RULE_SETUP
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 161 "core/pbrtlex.ll"
+//#line 161 "core/pbrtlex.ll"
 { return LBRACK; }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 162 "core/pbrtlex.ll"
+//#line 162 "core/pbrtlex.ll"
 { return RBRACK; }
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 163 "core/pbrtlex.ll"
+//#line 163 "core/pbrtlex.ll"
 { BEGIN STR; str_pos = 0; }
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 164 "core/pbrtlex.ll"
+//#line 164 "core/pbrtlex.ll"
 {add_string_char('\n');}
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 165 "core/pbrtlex.ll"
+//#line 165 "core/pbrtlex.ll"
 {add_string_char('\t');}
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 166 "core/pbrtlex.ll"
+//#line 166 "core/pbrtlex.ll"
 {add_string_char('\r');}
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 167 "core/pbrtlex.ll"
+//#line 167 "core/pbrtlex.ll"
 {add_string_char('\b');}
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 168 "core/pbrtlex.ll"
+//#line 168 "core/pbrtlex.ll"
 {add_string_char('\f');}
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 169 "core/pbrtlex.ll"
+//#line 169 "core/pbrtlex.ll"
 {add_string_char('\"');}
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 170 "core/pbrtlex.ll"
+//#line 170 "core/pbrtlex.ll"
 {add_string_char('\\');}
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 171 "core/pbrtlex.ll"
+//#line 171 "core/pbrtlex.ll"
 {
   int val = atoi(yytext+1);
   while (val > 256)
@@ -1366,41 +1374,41 @@ YY_RULE_SETUP
 case 60:
 /* rule 60 can match eol */
 YY_RULE_SETUP
-#line 179 "core/pbrtlex.ll"
+//#line 179 "core/pbrtlex.ll"
 {line_num++;}
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 180 "core/pbrtlex.ll"
+//#line 180 "core/pbrtlex.ll"
 { add_string_char(yytext[1]);}
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 181 "core/pbrtlex.ll"
+//#line 181 "core/pbrtlex.ll"
 {BEGIN INITIAL; return STRING;}
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 182 "core/pbrtlex.ll"
+//#line 182 "core/pbrtlex.ll"
 {add_string_char(yytext[0]);}
 	YY_BREAK
 case 64:
 /* rule 64 can match eol */
 YY_RULE_SETUP
-#line 183 "core/pbrtlex.ll"
+//#line 183 "core/pbrtlex.ll"
 {Error("Unterminated string!");}
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 185 "core/pbrtlex.ll"
+//#line 185 "core/pbrtlex.ll"
 { Error( "Illegal character: %c (0x%x)", yytext[0], int(yytext[0])); }
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 186 "core/pbrtlex.ll"
+//#line 186 "core/pbrtlex.ll"
 ECHO;
 	YY_BREAK
-#line 1396 "core/pbrtlex.cpp"
+//#line 1396 "core/pbrtlex.cpp"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(STR):
 case YY_STATE_EOF(COMMENT):
@@ -2364,7 +2372,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 186 "core/pbrtlex.ll"
+//#line 186 "core/pbrtlex.ll"
 
 
 int yywrap() {
@@ -2373,6 +2381,4 @@ int yywrap() {
     return 0;
 }
 
-
-
-
+} // namespace

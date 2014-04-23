@@ -29,10 +29,12 @@
 
  */
 
-
+#include "../AssimpPCH.h"
 // core/geometry.cpp*
-#include "stdafx.h"
 #include "geometry.h"
+
+namespace pbrt
+{
 
 // BBox Method Definitions
 BBox Union(const BBox &b, const Point &p) {
@@ -85,4 +87,4 @@ bool BBox::IntersectP(const Ray &ray, float *hitt0,
     return true;
 }
 
-
+} // namespace

@@ -39,6 +39,12 @@
 // core/geometry.h*
 #include "pbrt.h"
 
+namespace pbrt
+{
+
+class Point;
+class Normal;
+
 // Geometry Declarations
 class Vector {
 public:
@@ -430,8 +436,8 @@ public:
     const Point &operator[](int i) const;
     Point &operator[](int i);
     Point Lerp(float tx, float ty, float tz) const {
-        return Point(::Lerp(tx, pMin.x, pMax.x), ::Lerp(ty, pMin.y, pMax.y),
-                     ::Lerp(tz, pMin.z, pMax.z));
+        return Point(pbrt::Lerp(tx, pMin.x, pMax.x), pbrt::Lerp(ty, pMin.y, pMax.y),
+                     pbrt::Lerp(tz, pMin.z, pMax.z));
     }
     Vector Offset(const Point &p) const {
         return Vector((p.x - pMin.x) / (pMax.x - pMin.x),
@@ -647,6 +653,6 @@ inline float SphericalPhi(const Vector &v) {
     return (p < 0.f) ? p + 2.f*M_PI : p;
 }
 
-
+} // namespace
 
 #endif // PBRT_CORE_GEOMETRY_H

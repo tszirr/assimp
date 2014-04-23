@@ -38,7 +38,14 @@
 
 // core/spectrum.h*
 #include "pbrt.h"
-#include "parallel.h"
+
+namespace pbrt
+{
+
+template <int nSamples> class CoefficientSpectrum;
+class RGBSpectrum;
+class SampledSpectrum;
+typedef RGBSpectrum Spectrum;
 
 // Spectrum Utility Declarations
 static const int sampledLambdaStart = 400;
@@ -231,7 +238,7 @@ public:
     CoefficientSpectrum Clamp(float low = 0, float high = INFINITY) const {
         CoefficientSpectrum ret;
         for (int i = 0; i < nSamples; ++i)
-            ret.c[i] = ::Clamp(c[i], low, high);
+            ret.c[i] = pbrt::Clamp(c[i], low, high);
         Assert(!ret.HasNaNs());
         return ret;
     }
@@ -468,6 +475,6 @@ inline Spectrum Lerp(float t, const Spectrum &s1, const Spectrum &s2) {
     return (1.f - t) * s1 + t * s2;
 }
 
-
+} // namespace
 
 #endif // PBRT_CORE_SPECTRUM_H

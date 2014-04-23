@@ -38,16 +38,22 @@
 
 // core/paramset.h*
 #include "pbrt.h"
-#include "fileutil.h"
 #include "geometry.h"
-#include "texture.h"
+//#include "texture.h"
 #include "spectrum.h"
+#include "memory.h"
  #if (_MSC_VER >= 1400)
  #include <stdio.h>
  #define snprintf _snprintf
  #endif
 #include <map>
+
+namespace pbrt
+{
+
 using std::map;
+
+template <typename T> struct ParamSetItem;
 
 // ParamSet Declarations
 class ParamSet {
@@ -140,7 +146,7 @@ ParamSetItem<T>::ParamSetItem(const string &n, const T *v, int ni) {
     lookedUp = false;
 }
 
-
+/*
 
 // TextureParams Declarations
 class TextureParams {
@@ -197,6 +203,8 @@ private:
     const ParamSet &geomParams, &materialParams;
 };
 
+*/
 
+} // namespace
 
 #endif // PBRT_CORE_PARAMSET_H

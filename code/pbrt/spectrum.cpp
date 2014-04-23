@@ -31,8 +31,11 @@
 
 
 // core/spectrum.cpp*
-#include "stdafx.h"
+#include "../AssimpPCH.h"
 #include "spectrum.h"
+
+namespace pbrt
+{
 
 // Spectrum Method Definitions
 bool SpectrumSamplesSorted(const float *lambda, const float *vals, int n) {
@@ -904,3 +907,5 @@ const float RGBIllum2SpectBlue[nRGB2SpectSamples] =  {
     1.5535067531939065e-01,   1.4878477178237029e-01,
     1.6624255403475907e-01,   1.6997613960634927e-01,
     1.5769743995852967e-01,   1.9069090525482305e-01 };
+
+} // namespace

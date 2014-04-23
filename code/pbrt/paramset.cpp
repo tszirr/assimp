@@ -29,12 +29,14 @@
 
  */
 
-
+#include "../AssimpPCH.h"
 // core/paramset.cpp*
-#include "stdafx.h"
 #include "paramset.h"
-#include "floatfile.h"
-#include "textures/constant.h"
+// #include "floatfile.h"
+// #include "textures/constant.h"
+
+namespace pbrt
+{
 
 // ParamSet Macros
 #define ADD_PARAM_TYPE(T, vec) \
@@ -593,7 +595,7 @@ string ParamSet::ToString() const {
     return ret;
 }
 
-
+/*
 // TextureParams Method Definitions
 Reference<Texture<Spectrum> >
 TextureParams::GetSpectrumTexture(const string &n,
@@ -644,5 +646,5 @@ Reference<Texture<float> > TextureParams::GetFloatTextureOrNull(const string &n)
         return NULL;
     }
 }
-
-
+*/
+} // namespace
